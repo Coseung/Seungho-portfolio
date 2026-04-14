@@ -1,0 +1,3 @@
+# Netlify SPA 라우팅
+# /kakao, /naver 같은 경로를 모두 index.html로 전달
+/*  /index.html  200

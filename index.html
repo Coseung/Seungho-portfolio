@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>최승호 | Backend Developer</title>
+  <link rel="icon" href="assets/img/3d아이콘.png" type="image/png" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <div class="gradient-bg"></div>
+
+  <!-- 회사 배너 (회사별 URL 접근 시 app.js가 표시) -->
+  <div id="company-banner" class="company-banner"></div>
+
+  <!-- NAV -->
+  <nav>
+    <span class="nav-logo">CHOI SEUNGHO</span>
+    <ul class="nav-links">
+      <li><a href="#hero">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="nav-contact-btn">Contact</a>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════════════
+       HERO  —  프로필 사진(왼쪽) + 이름/직함/버튼(오른쪽)
+  ═══════════════════════════════════════════════════ -->
+  <section id="hero">
+    <div class="hero-layout">
+
+      <!-- 왼쪽: 프로필 사진 -->
+      <div class="profile-frame reveal-left">
+        <img src="assets/img/민증+정장.jpg" alt="최승호 프로필사진" class="profile-img" />
+      </div>
+
+      <!-- 오른쪽: 이름 + 소개 -->
+      <div class="hero-text-col">
+        <div id="hero-badge" class="hero-badge reveal">Backend Developer</div>
+
+        <h1 class="hero-name reveal" style="transition-delay:.08s">최승호</h1>
+
+        <p id="hero-tagline" class="hero-sub reveal" style="transition-delay:.14s">
+          문제를 해결하는 과정이 <strong>실제 사용과 결과로 이어질 때</strong><br>
+          가장 큰 보람을 느끼는 신입 개발자입니다.
+        </p>
+
+        <div class="hero-btns reveal" style="transition-delay:.2s">
+          <a href="#projects" class="btn-primary">Projects 보기</a>
+          <a href="#contact" class="btn-outline">Contact</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-indicator">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M12 5v14M5 12l7 7 7-7" />
+      </svg>
+      SCROLL
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════
+       ABOUT ME
+  ═══════════════════════════════════════════════════ -->
+  <section id="about">
+    <div class="section-label reveal">About Me</div>
+    <h2 class="section-title reveal">저는 이런 <span>개발자</span>입니다</h2>
+
+    <div class="about-grid">
+      <div class="about-body reveal-left">
+        <p class="about-para">
+          사용자가 반복적으로 겪는 불편함을 문제로 정의하고, 이를 해결하는 프로그램을 직접 개발해
+          <span class="about-hl">11만 조회수</span>를 기록했으며,
+          실제 사용자 <span class="about-hl">판매 경험</span>까지 이어졌습니다.
+        </p>
+        <p class="about-para">
+          문제를 단순히 구현으로 끝내지 않고, 운영 과정에서 발생하는 이슈와 피드백을 개선하며
+          <strong>사용되는 서비스로 완성하는 과정</strong>을 중요하게 생각합니다.
+        </p>
+        <ul class="about-traits">
+          <li><span>문제를 마주하면 원인을 파악하고 <strong>해결하는 과정 자체</strong>를 중요하게 생각합니다</span></li>
+          <li><span>새로 학습한 내용은 <strong>기록으로 남기며</strong>, 다시 꺼내 쓸 수 있도록 정리합니다</span></li>
+          <li><span>부족함을 인지하고 <strong>하나씩 채워가는 과정</strong>에서 가장 큰 성장을 느낍니다</span></li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════
+       COVER LETTER  (기본 숨김 · 회사별 URL 접근 시 표시)
+  ═══════════════════════════════════════════════════ -->
+  <section id="cover-letter">
+    <div class="section-label reveal">Cover Letter</div>
+    <h2 class="section-title reveal">지원 <span>동기</span></h2>
+    <div class="glass cover-letter-card reveal">
+      <span class="cover-company-chip"></span>
+      <div class="cover-letter-title"></div>
+      <div class="cover-letter-body"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════
+       PROJECTS
+  ═══════════════════════════════════════════════════ -->
+  <section id="projects">
+    <div class="section-label reveal">Work</div>
+    <h2 class="section-title reveal">프로젝트 <span>경험</span></h2>
+
+    <div class="projects-grid">
+
+      <!-- Creator-Flex -->
+      <div class="project-card reveal" data-project-id="creator-flex">
+        <div class="project-header">
+          <div class="project-header-left">
+            <img src="assets/img/MCNHR.png" alt="MCN HR" class="project-icon" />
+            <div>
+              <div class="project-name">Creator-Flex</div>
+              <div class="project-desc">MCN HR SaaS 플랫폼 · 팀장 (6인)</div>
+            </div>
+          </div>
+          <span class="project-date">2026.01 – 2026.02</span>
+        </div>
+        <p class="project-service">크리에이터 소속사 MCN의 직원과 크리에이터를 통합 관리하는 HR SaaS 플랫폼</p>
+        <p class="tech-list">Java 17 · Spring Boot 3 · Spring Data JPA · MySQL · Redis · AWS S3 · React 18 · Vite</p>
+        <div class="achievements-title">핵심 성과</div>
+        <ul class="achievement-list">
+          <li><span><strong>WebSocket + STOMP</strong> 프로토콜을 활용하여 사내 협업을 위한 1:1 및 단체 실시간 채팅 기능 구현</span></li>
+          <li><span>채팅 브로드캐스트 시 중복 렌더링 문제를 <strong>clientUuid</strong> 식별자 도입으로 필터링하여 불필요한 클라이언트 렌더링 부하 방지</span></li>
+          <li><span>마지막 메시지 ID 기준 페이징 도입으로 채팅 응답 시간 <strong>70ms → 14ms, 약 80% 단축</strong></span></li>
+          <li><span><strong>JWT Access Token</strong> 검증 로직 구현 – 관리자/매니저/크리에이터 직급별 접근 권한 제어</span></li>
+          <li><span>전사·개인 스케줄 및 인사 정보를 처리하는 <strong>RESTful API 설계 및 구현</strong></span></li>
+        </ul>
+      </div>
+
+      <!-- Threads 자동화 -->
+      <div class="project-card reveal" data-project-id="threads">
+        <div class="project-header">
+          <div class="project-header-left">
+            <img src="assets/img/threadimage.png" alt="Threads" class="project-icon" />
+            <div>
+              <div class="project-name">스레드 자동화 프로그램</div>
+              <div class="project-desc">SNS 자동화 툴 · 개인 제작 · 판매</div>
+            </div>
+          </div>
+          <span class="project-date">2025.05 – 유지보수 진행중</span>
+        </div>
+        <p class="project-service">팔로우 증가를 위해 하루 수십 차례 반복되던 좋아요·리포스트·댓글·팔로우 작업을 자동화한 Python 프로그램</p>
+        <p class="tech-list">Python · Selenium</p>
+        <div class="achievements-title">핵심 성과</div>
+        <ul class="achievement-list">
+          <li><span>유튜브 영상으로 <strong>11만 조회수</strong> 달성, 실제 사용자 판매 경험으로 연결</span></li>
+          <li><span>기계적 댓글 패턴 피드백을 수용해 <strong>무작위 조합 + 난수화 간격 로직</strong> 도입으로 안정성 확보</span></li>
+          <li><span><strong>실시간 로그 모니터링 시스템</strong>과 JSON 기반 설정값 자동 저장 기능 구현 – 운영 효율 극대화</span></li>
+          <li><span>고객 니즈를 기술로 구현해 <strong>실제 비즈니스 수익</strong>과 서비스 성장으로 연결</span></li>
+        </ul>
+      </div>
+
+      <!-- MediTag -->
+      <div class="project-card reveal" data-project-id="meditag">
+        <div class="project-header">
+          <div class="project-header-left">
+            <img src="assets/img/meditageImage.png" alt="MediTag" class="project-icon" />
+            <div>
+              <div class="project-name">메디태그</div>
+              <div class="project-desc">NFC 기반 시각장애인 복약관리 앱 · 백엔드 &amp; 인프라</div>
+            </div>
+          </div>
+          <span class="project-date">2024.07 – 2025.10</span>
+        </div>
+        <p class="project-service">시각장애인이 시간대별 복용해야 할 약의 종류를 혼동하는 문제를 해결하기 위한 NFC 기반 복약관리 프로그램 (5인)</p>
+        <p class="tech-list">Spring Boot · Java · Flutter · AWS EC2 · AWS RDS · AWS S3 · Redis</p>
+        <div class="achievements-title">핵심 성과</div>
+        <ul class="achievement-list">
+          <li><span>S3 <strong>Presigned URL</strong> 도입으로 서버 파일 처리 부하 <strong>100% → 0%</strong> 전환, 네트워크 I/O
+              <strong>50% 감소</strong></span></li>
+          <li><span>EC2 타임존 설정 오류 수정으로 알림 발송 <strong>9시간 지연 → 0초</strong> 정상화</span></li>
+          <li><span><strong>SMS API</strong> 연동 – 복약 완료 시 보호자에게 즉시 문자 전송 기능 구현</span></li>
+          <li><span>AWS EC2 기반 서버 배포로 실제 운영 환경에서 서비스 기능 검증</span></li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════
+       LINKS  —  GitHub + Tech Blog (프로젝트 다음 섹션)
+  ═══════════════════════════════════════════════════ -->
+  <section id="links">
+    <div class="section-label reveal">Links</div>
+    <h2 class="section-title reveal">GitHub &amp; <span>Tech Blog</span></h2>
+    <div class="links-grid">
+      <!-- GitHub Card -->
+      <a href="https://github.com/Coseung" target="_blank" class="link-card-og reveal">
+        <div class="og-content">
+          <div class="og-title">Coseung - Overview</div>
+          <div class="og-desc">Coseung has 19 repositories available. Follow their code on GitHub.</div>
+          <div class="og-meta">
+            <svg class="og-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+            </svg>
+            <span class="og-url">github.com/Coseung</span>
+          </div>
+        </div>
+        <div class="og-image">
+          <img src="assets/img/인형노트북.png" alt="GitHub">
+        </div>
+      </a>
+
+      <!-- Velog Card -->
+      <a href="https://velog.io/@dreamdp01/posts" target="_blank" class="link-card-og reveal"
+        style="transition-delay:.1s">
+        <div class="og-content">
+          <div class="og-title">dreamdp01 (승호) / 작성글 - velog</div>
+          <div class="og-desc">dreamdp01님이 작성한 포스트 시리즈들을 확인해보세요.</div>
+          <div class="og-meta">
+            <svg class="og-icon" width="16" height="16" viewBox="0 0 24 24" fill="#20c997">
+              <path
+                d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14h-4v-2h4v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" />
+            </svg>
+            <span class="og-url">velog.io/@dreamdp01</span>
+          </div>
+        </div>
+        <div class="og-image">
+          <img src="assets/img/포키노트북.png" alt="Velog">
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════
+       SKILLS
+  ═══════════════════════════════════════════════════ -->
+  <section id="skills">
+    <div class="section-label reveal">Tech</div>
+    <h2 class="section-title reveal">기술 <span>스택</span></h2>
+    <div class="skills-grid">
+      <div class="glass skill-group reveal">
+        <div class="skill-group-label">Backend</div>
+        <div class="skill-item">
+          <div class="skill-name">Java</div>
+          <div class="skill-desc">컬렉션, 스트림, 람다 등을 활용하여 비즈니스 로직을 구현했습니다. 자료구조·알고리즘을 자바 기반으로 학습했습니다.</div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-name">Spring Boot</div>
+          <div class="skill-desc">RESTful API 설계·구현, Spring Security 기반 JWT 인증, OAuth 2.0 소셜 로그인, WebSocket + STOMP 실시간
+            채팅 구현 경험이 있습니다.</div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-name">MySQL</div>
+          <div class="skill-desc">서비스 요구사항에 맞는 테이블 직접 설계, MyBatis를 활용한 SQL 직접 작성 경험이 있습니다.</div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-name">Spring Data JPA</div>
+          <div class="skill-desc">엔티티 설계, 연관관계 매핑, JPQL 커스텀 쿼리 작성, @Transactional 트랜잭션 처리 경험이 있습니다.</div>
+        </div>
+      </div>
+      <div class="glass skill-group reveal" style="transition-delay:.1s">
+        <div class="skill-group-label">Infra</div>
+        <div class="skill-item">
+          <div class="skill-name">AWS</div>
+          <div class="skill-desc">EC2 서버 배포, RDS 데이터베이스 구축, S3 파일 스토리지 연동, CloudFront CDN, Route 53 도메인 연결. S3 Presigned
+            URL을 활용한 직접 업로드 구조 적용 경험이 있습니다.</div>
+        </div>
+      </div>
+      <div class="glass skill-group reveal" style="transition-delay:.2s">
+        <div class="skill-group-label">Frontend</div>
+        <div class="skill-item">
+          <div class="skill-name">React</div>
+          <div class="skill-desc">React + Vite 기반 프론트엔드 구성, 컴포넌트 단위 UI 설계 및 백엔드 API 연동 경험이 있습니다.</div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-name">HTML / CSS / JS</div>
+          <div class="skill-desc">화면 구조 설계, 이벤트 처리, 비동기 통신 구현. Thymeleaf 템플릿 엔진 활용 경험이 있습니다.</div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-name">JSP</div>
+          <div class="skill-desc">MVC 패턴 프로젝트에서 JSP로 뷰 레이어 구성, Controller → JSP 데이터 흐름을 이해하고 있습니다.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════
+       EXPERIENCE
+  ═══════════════════════════════════════════════════ -->
+  <section id="experience">
+    <div class="section-label reveal">Experience</div>
+    <h2 class="section-title reveal">교육 <span>경험</span></h2>
+    <div class="glass exp-card reveal">
+      <div class="exp-grid">
+        <div>
+          <div class="exp-period">2025.07 – 2026.03</div>
+          <div class="exp-org">KH 정보교육원</div>
+          <div class="exp-role">AWS 클라우드 기반<br>DevOps 개발자 양성 과정</div>
+        </div>
+        <div>
+          <div class="exp-detail-title">주요 내용</div>
+          <ul class="exp-list">
+            <li>웹 개발에 대한 기본 지식과 활용법 학습</li>
+            <li>2번의 팀 프로젝트를 통한 협업 경험 (6인)</li>
+            <li>사용 기술: Java, Spring Boot, JSP, React</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════
+       EDUCATION & CERTS
+  ═══════════════════════════════════════════════════ -->
+  <section id="education">
+    <div class="section-label reveal">Background</div>
+    <h2 class="section-title reveal">학력 &amp; <span>자격증</span></h2>
+    <div class="edu-grid">
+      <div class="glass edu-card reveal-left">
+        <div class="edu-card-label">Education</div>
+        <div class="edu-item">
+          <div class="edu-name">성결대학교</div>
+          <div class="edu-sub">미디어소프트웨어학과</div>
+          <div class="edu-meta">2020.03 – 2026.02 · GPA 3.8 / 4.5</div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-name">용호고등학교</div>
+          <div class="edu-sub">이과계열</div>
+          <div class="edu-meta">2017.03 – 2020.02</div>
+        </div>
+      </div>
+      <div class="glass edu-card reveal-right">
+        <div class="edu-card-label">Certificate &amp; Award</div>
+        <div class="cert-item">
+          <div class="cert-name">정보처리기사 필기</div>
+          <div class="cert-org">한국산업인력공단</div>
+          <div><span class="cert-date">2025.08</span></div>
+        </div>
+        <div class="cert-item">
+          <div class="cert-name">소프트웨어 창의적문제해결프로젝트 (장려상)</div>
+          <div class="cert-org">성결대학교</div>
+          <div><span class="cert-date">2025.11</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════
+       GROWTH / BLOG
+  ═══════════════════════════════════════════════════ -->
+  <section id="growth">
+    <div class="section-label reveal">Blog</div>
+    <h2 class="section-title reveal">성장 <span>기록</span></h2>
+    <div class="growth-grid">
+      <a href="https://velog.io/@dreamdp01/Spring-Framework%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C" target="_blank"
+        class="glass growth-link-card reveal">
+        <span class="growth-link-num">01</span>
+        <span class="growth-link-title">Spring Framework에 대해서</span>
+      </a>
+      <a href="https://velog.io/@dreamdp01/%EC%9D%98%EC%A1%B4%EC%84%B1-%EC%A3%BC%EC%9E%85%EC%9D%84-%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0"
+        target="_blank" class="glass growth-link-card reveal" style="transition-delay:.05s">
+        <span class="growth-link-num">02</span>
+        <span class="growth-link-title">의존성 주입을 하는 이유</span>
+      </a>
+      <a href="https://velog.io/@dreamdp01/JVM%EC%97%90-%EB%8C%80%ED%95%98%EC%97%AC" target="_blank"
+        class="glass growth-link-card reveal" style="transition-delay:.1s">
+        <span class="growth-link-num">03</span>
+        <span class="growth-link-title">JVM에 대하여</span>
+      </a>
+      <a href="https://velog.io/@dreamdp01/GCGarbage-Collection-%EC%95%8C%EC%95%84%EA%B0%80%EA%B8%B0" target="_blank"
+        class="glass growth-link-card reveal" style="transition-delay:.15s">
+        <span class="growth-link-num">04</span>
+        <span class="growth-link-title">GC (Garbage Collection) 알아가기</span>
+      </a>
+      <a href="https://velog.io/@dreamdp01/LinkedList%EA%B0%80-%EC%82%BD%EC%9E%85%EC%9D%B4-%EB%B9%A0%EB%A5%B4%EB%8B%A4-%ED%85%8C%EC%8A%A4%ED%8A%B8%ED%96%88%EB%8A%94%EB%8D%B0-ArrayList%EA%B0%80-%EB%8D%94-%EB%B9%A0%EB%A5%B4%EB%8D%98%EB%8D%B0%EC%9A%94"
+        target="_blank" class="glass growth-link-card reveal" style="transition-delay:.2s">
+        <span class="growth-link-num">05</span>
+        <span class="growth-link-title">LinkedList vs ArrayList</span>
+      </a>
+      <a href="https://velog.io/@dreamdp01/posts" target="_blank" class="glass growth-link-card reveal"
+        style="transition-delay:.25s">
+        <span class="growth-link-num">→</span>
+        <span class="growth-link-title">전체 포스트 보기</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════
+       CONTACT
+  ═══════════════════════════════════════════════════ -->
+  <section id="contact">
+    <div class="section-label reveal">Contact</div>
+    <h2 class="section-title reveal"></h2>
+    <div class="contact-card reveal">
+      <p class="contact-desc">끝까지 읽어주셔서 감사합니다.<br>언제든지 연락 주시면 빠르게 답변드리겠습니다.</p>
+      <div class="contact-items">
+        <div class="contact-item">
+          <div class="contact-label">Phone</div>
+          <div class="contact-value">010-6534-9903</div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-label">Email</div>
+          <div class="contact-value"><a href="mailto:dreamdpsh@gmail.com">dreamdpsh@gmail.com</a></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-label">GitHub</div>
+          <div class="contact-value"><a href="https://github.com/Coseung" target="_blank">github.com/Coseung</a></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-label">Tech Blog</div>
+          <div class="contact-value"><a href="https://velog.io/@dreamdp01/posts" target="_blank">velog.io/@dreamdp01</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 <span>최승호</span> · Backend Developer</p>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <script src="js/animations.js"></script>
+</body>
+
+</html>
