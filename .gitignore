@@ -1,12 +1,12 @@
-# OS-specific files
+# OS
 .DS_Store
 .DS_Store?
 ._*
-Thumbe.db
+Thumbs.db
 ehthumbs.db
 Desktop.ini
 
-# IDE-specific files
+# IDE
 .vscode/
 .idea/
 *.swp
@@ -21,11 +21,11 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Deployment / CI/CD
+# Deployment / CI
 .vercel/
 .netlify/
 
-# Local Environment / Secrets
+# Environment / Secrets
 .env
 .env.local
 .env.development.local
@@ -33,7 +33,7 @@ yarn-error.log*
 .env.production.local
 *.secret
 
-# Build system / Dependencies (just in case they are added later)
+# Dependencies & Build output
 node_modules/
 dist/
 build/
@@ -41,4 +41,19 @@ out/
 .next/
 .serverless/
 
+# Vite
+*.local
+
+# Backup / Temp files
+*.bak
+*.tmp
+
+# PDF (이력서 등 생성 파일)
+*.pdf
+
+# 작업 메모 / 개인 노트
+작업현황.md
+sparkles.md
+
+# Claude Code
 CLAUDE.md

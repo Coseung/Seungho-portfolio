@@ -135,7 +135,7 @@ section {
   display: flex; align-items: center; justify-content: center;
 }
 /* 사진 뒤 그라데이션 그림자 */
-.profile-frame::before {
+/* .profile-frame::before {
   content: '';
   position: absolute;
   inset: -30% -40%;
@@ -146,7 +146,7 @@ section {
   filter: blur(28px);
   z-index: 0;
   pointer-events: none;
-}
+} */
 .profile-img {
   width: 100%;
   aspect-ratio: 3 / 4;
@@ -501,16 +501,105 @@ section {
 }
 
 /* ═══════════════════════════════════════════════
-   GROWTH / BLOG
+   GROWTH / BLOG  —  Card-news grid
 ═══════════════════════════════════════════════ */
-#growth .growth-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px,1fr)); gap: 14px; }
-.growth-link-card {
-  padding: 18px 22px; text-decoration: none; color: var(--text-secondary);
-  display: flex; flex-direction: column; gap: 5px;
+.blog-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
-.growth-link-card:hover { color: #fff; }
-.growth-link-num { font-size: .65rem; color: var(--accent); font-weight: 700; letter-spacing: .08em; }
-.growth-link-title { font-size: .855rem; font-weight: 600; }
+
+/* 블로그 카드 */
+.blog-card {
+  display: flex; flex-direction: column;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  text-decoration: none;
+  transition: transform .25s, border-color .25s, background .25s;
+}
+.blog-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-hover);
+  background: var(--bg-card-hover);
+}
+
+/* 커버 이미지 */
+.blog-card-img-wrap {
+  position: relative; width: 100%; height: 160px; overflow: hidden; flex-shrink: 0;
+}
+.blog-card-img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform .4s ease;
+}
+.blog-card:hover .blog-card-img { transform: scale(1.05); }
+.blog-card-img-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to bottom, transparent 40%, rgba(8,8,15,0.75) 100%);
+}
+
+/* 바디 */
+.blog-card-body {
+  padding: 18px 20px 20px;
+  display: flex; flex-direction: column; gap: 8px; flex: 1;
+}
+.blog-card-category {
+  display: inline-block; width: fit-content;
+  font-size: .62rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+  padding: 3px 8px; border-radius: 4px;
+}
+.blog-card-title {
+  font-size: .92rem; font-weight: 700; color: #fff;
+  line-height: 1.45; margin: 0;
+}
+.blog-card-desc {
+  font-size: .78rem; color: var(--text-secondary);
+  line-height: 1.65; margin: 0; flex: 1;
+}
+.blog-card-arrow {
+  font-size: .72rem; color: var(--accent); font-weight: 700;
+  letter-spacing: .04em; margin-top: 4px;
+  transition: letter-spacing .2s;
+}
+.blog-card:hover .blog-card-arrow { letter-spacing: .1em; }
+
+/* CTA 카드 (전체 보기) */
+.blog-card-cta {
+  align-items: stretch; justify-content: stretch;
+  background: rgba(47,47,228,0.06);
+  border-color: rgba(47,47,228,0.2);
+  min-height: 100%;
+}
+.blog-card-cta:hover {
+  background: rgba(47,47,228,0.12);
+  border-color: rgba(47,47,228,0.4);
+}
+.blog-card-cta-inner {
+  flex: 1; display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 10px; padding: 32px 20px; text-align: center;
+}
+.blog-card-cta-arrow {
+  font-size: 2rem; color: var(--accent); line-height: 1;
+  transition: transform .25s;
+}
+.blog-card-cta:hover .blog-card-cta-arrow { transform: translateX(6px); }
+.blog-card-cta-label {
+  font-size: .95rem; font-weight: 700; color: #fff; margin: 0;
+}
+.blog-card-cta-sub {
+  font-size: .72rem; color: var(--text-muted); margin: 0; letter-spacing: .04em;
+}
+
+/* 반응형 */
+@media (max-width: 900px) {
+  .blog-card-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .blog-card-grid { grid-template-columns: 1fr; }
+  .blog-card-img-wrap { height: 180px; }
+}
 
 /* ═══════════════════════════════════════════════
    CONTACT
@@ -540,6 +629,32 @@ footer {
   color: var(--text-muted); font-size: .76rem;
 }
 footer span { color: var(--accent); }
+
+/* ─── Print / PDF ────────────────────────────────── */
+@media print {
+  /* 애니메이션 요소 강제 표시 */
+  .reveal, .reveal-left, .reveal-right {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  /* 프로필 이미지 box-shadow 제거 (PDF에서 검은 박스로 렌더링됨) */
+  .profile-img {
+    box-shadow: none !important;
+    border: 1px solid rgba(47, 47, 228, 0.5) !important;
+  }
+
+  /* 고정 nav 숨김 */
+  nav { display: none !important; }
+  .company-banner { display: none !important; }
+  .scroll-indicator { display: none !important; }
+
+  /* backdrop-filter 제거 (PDF 미지원) */
+  .glass, nav {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+}
 
 /* ─── Responsive ─────────────────────────────────── */
 @media (max-width: 860px) {

@@ -1,0 +1,20 @@
+{
+  "meta": {
+    "company": "에코마케팅",
+    "position": "Backend Developer"
+  },
+  "hero": {
+    "badge": "에코마케팅 Backend Developer 지원",
+    "tagline": "여기에 에코마케팅에 맞는 한 줄 소개를 작성하세요.<br><strong>강조할 부분</strong>은 strong 태그로 감쌀 수 있습니다."
+  },
+  "about": {
+    "intro": "About 섹션에 표시될 에코마케팅 맞춤 소개 문단입니다.<br><br><strong>강조할 내용</strong>은 이렇게 처리할 수 있어요."
+  },
+  "coverLetter": {
+    "title": "에코마케팅에 지원하는 이유",
+    "body": "지원동기 본문을 여기에 작성하세요.\n\n줄바꿈은 \\n으로 처리됩니다.\n\n<strong>강조할 문장</strong>은 strong 태그로 감쌀 수 있습니다."
+  },
+  "highlightedProjects": [
+    "creator-flex"
+  ]
+}
