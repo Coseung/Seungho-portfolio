@@ -92,9 +92,94 @@ function initProjectStagger() {
   });
 }
 
+// ─── Hero Sparkles (Canvas) ──────────────────────────
+function initSparkles() {
+  const hero = document.getElementById('hero');
+  if (!hero) return;
+
+  const canvas = document.createElement('canvas');
+  canvas.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0;';
+  hero.style.position = 'relative';
+  hero.style.overflow = 'hidden';
+  hero.insertBefore(canvas, hero.firstChild);
+
+  const ctx = canvas.getContext('2d');
+  const COLOR = '123, 158, 255';
+  const DENSITY = 80;
+
+  let particles = [];
+
+  function resize() {
+    canvas.width  = hero.offsetWidth;
+    canvas.height = hero.offsetHeight;
+  }
+
+  function createParticle() {
+    return {
+      x:       Math.random() * canvas.width,
+      y:       Math.random() * canvas.height,
+      r:       Math.random() * 0.8 + 0.4,
+      alpha:   Math.random(),
+      da:      (Math.random() * 0.008 + 0.003) * (Math.random() < 0.5 ? 1 : -1),
+      vx:      (Math.random() - 0.5) * 0.25,
+      vy:      (Math.random() - 0.5) * 0.25,
+    };
+  }
+
+  function init() {
+    resize();
+    particles = Array.from({ length: DENSITY }, createParticle);
+  }
+
+  function tick() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    particles.forEach(p => {
+      p.alpha += p.da;
+      if (p.alpha <= 0 || p.alpha >= 1) p.da *= -1;
+      p.x += p.vx;
+      p.y += p.vy;
+      if (p.x < 0) p.x = canvas.width;
+      if (p.x > canvas.width)  p.x = 0;
+      if (p.y < 0) p.y = canvas.height;
+      if (p.y > canvas.height) p.y = 0;
+
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(${COLOR},${Math.max(0, Math.min(1, p.alpha))})`;
+      ctx.fill();
+    });
+    requestAnimationFrame(tick);
+  }
+
+  window.addEventListener('resize', () => {
+    resize();
+    particles = Array.from({ length: DENSITY }, createParticle);
+  }, { passive: true });
+
+  init();
+  tick();
+}
+
+// ─── Animated Underline ───────────────────────────────
+function initAnimatedUnderline() {
+  const el = document.querySelector('.underline-text-wrap');
+  if (!el) return;
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        el.classList.add('underline-visible');
+        observer.unobserve(el);
+      }
+    });
+  }, { threshold: 0.8 });
+  observer.observe(el);
+}
+
 // ─── Init all ────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
+  initSparkles();
   initScrollReveal();
+  initAnimatedUnderline();
   initCounters();
   initNav();
   initProjectStagger();

@@ -72,7 +72,11 @@
   ═══════════════════════════════════════════════════ -->
   <section id="about">
     <div class="section-label reveal">About Me</div>
-    <h2 class="section-title reveal">저는 이런 <span>개발자</span>입니다</h2>
+    <h2 class="section-title reveal">저는 이런 <span class="underline-text-wrap">개발자<svg class="underline-svg"
+          viewBox="0 0 300 20" preserveAspectRatio="none" aria-hidden="true">
+          <path class="underline-path" d="M 0,10 Q 75,0 150,10 Q 225,20 300,10" stroke="#2F2FE4" stroke-width="2.5"
+            fill="none" />
+        </svg></span> 입니다</h2>
 
     <div class="about-grid">
       <div class="about-body reveal-left">
@@ -357,37 +361,87 @@
   <section id="growth">
     <div class="section-label reveal">Blog</div>
     <h2 class="section-title reveal">성장 <span>기록</span></h2>
-    <div class="growth-grid">
+    <div class="blog-card-grid">
+
       <a href="https://velog.io/@dreamdp01/Spring-Framework%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C" target="_blank"
-        class="glass growth-link-card reveal">
-        <span class="growth-link-num">01</span>
-        <span class="growth-link-title">Spring Framework에 대해서</span>
+        class="blog-card reveal">
+        <div class="blog-card-img-wrap">
+          <img src="https://velog.velcdn.com/images/dreamdp01/post/16ff65f4-6a29-428a-8b07-30cac82ee79c/image.png"
+            alt="Spring Framework" class="blog-card-img" />
+          <div class="blog-card-img-overlay"></div>
+        </div>
+        <div class="blog-card-body">
+          <p class="blog-card-title">Spring Framework에 대해서</p>
+          <p class="blog-card-desc">Spring의 핵심 개념과 IoC, DI, AOP를 중심으로 프레임워크 동작 원리를 정리했습니다.</p>
+          <span class="blog-card-arrow">읽기 →</span>
+        </div>
       </a>
+
       <a href="https://velog.io/@dreamdp01/%EC%9D%98%EC%A1%B4%EC%84%B1-%EC%A3%BC%EC%9E%85%EC%9D%84-%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0"
-        target="_blank" class="glass growth-link-card reveal" style="transition-delay:.05s">
-        <span class="growth-link-num">02</span>
-        <span class="growth-link-title">의존성 주입을 하는 이유</span>
+        target="_blank" class="blog-card reveal" style="transition-delay:.07s">
+        <div class="blog-card-img-wrap">
+          <img src="https://velog.velcdn.com/images/dreamdp01/post/a7027ab3-48f2-4a9f-8f52-d0d056178773/image.png"
+            alt="의존성 주입" class="blog-card-img" />
+          <div class="blog-card-img-overlay"></div>
+        </div>
+        <div class="blog-card-body">
+          <p class="blog-card-title">의존성 주입을 하는 이유</p>
+          <p class="blog-card-desc">DI(Dependency Injection)가 왜 필요한지, 어떤 방식으로 적용하는지 학습한 내용을 기록했습니다.</p>
+          <span class="blog-card-arrow">읽기 →</span>
+        </div>
       </a>
+
       <a href="https://velog.io/@dreamdp01/JVM%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C" target="_blank"
-        class="glass growth-link-card reveal" style="transition-delay:.1s">
-        <span class="growth-link-num">03</span>
-        <span class="growth-link-title">JVM에 대하여</span>
+        class="blog-card reveal" style="transition-delay:.14s">
+        <div class="blog-card-img-wrap">
+          <img src="https://velog.velcdn.com/images/dreamdp01/post/8c61932a-371f-4785-bb61-73b6d5ba5f14/image.png"
+            alt="JVM" class="blog-card-img" />
+          <div class="blog-card-img-overlay"></div>
+        </div>
+        <div class="blog-card-body">
+          <p class="blog-card-title">JVM에 대하여</p>
+          <p class="blog-card-desc">JVM의 구조와 클래스 로딩, 실행 엔진, 런타임 데이터 영역의 동작 원리를 정리했습니다.</p>
+          <span class="blog-card-arrow">읽기 →</span>
+        </div>
       </a>
+
       <a href="https://velog.io/@dreamdp01/GCGarbage-Collection-%EC%95%8C%EC%95%84%EA%B0%80%EA%B8%B0" target="_blank"
-        class="glass growth-link-card reveal" style="transition-delay:.15s">
-        <span class="growth-link-num">04</span>
-        <span class="growth-link-title">GC (Garbage Collection) 알아가기</span>
+        class="blog-card reveal" style="transition-delay:.21s">
+        <div class="blog-card-img-wrap">
+          <img src="https://velog.velcdn.com/images/dreamdp01/post/08c37525-9626-4947-9c19-79e3dca68989/image.png"
+            alt="GC" class="blog-card-img" />
+          <div class="blog-card-img-overlay"></div>
+        </div>
+        <div class="blog-card-body">
+          <p class="blog-card-title">GC (Garbage Collection) 알아가기</p>
+          <p class="blog-card-desc">GC의 동작 원리, 다양한 GC 알고리즘과 메모리 누수 방지 전략에 대해 탐구했습니다.</p>
+          <span class="blog-card-arrow">읽기 →</span>
+        </div>
       </a>
+
       <a href="https://velog.io/@dreamdp01/LinkedList%EA%B0%80-%EC%82%BD%EC%9E%85%EC%9D%B4-%EB%B9%A0%EB%A5%B4%EB%8B%A4-%ED%85%8C%EC%8A%A4%ED%8A%B8%ED%96%88%EB%8A%94%EB%8D%B0-ArrayList%EA%B0%80-%EB%8D%94-%EB%B9%A0%EB%A5%B4%EB%8D%98%EB%8D%B0%EC%9A%94"
-        target="_blank" class="glass growth-link-card reveal" style="transition-delay:.2s">
-        <span class="growth-link-num">05</span>
-        <span class="growth-link-title">LinkedList vs ArrayList</span>
+        target="_blank" class="blog-card reveal" style="transition-delay:.28s">
+        <div class="blog-card-img-wrap">
+          <img src="https://velog.velcdn.com/images/dreamdp01/post/e89bf9bc-a19b-4d55-9868-6f08641940e5/image.png"
+            alt="LinkedList vs ArrayList" class="blog-card-img" />
+          <div class="blog-card-img-overlay"></div>
+        </div>
+        <div class="blog-card-body">
+          <p class="blog-card-title">LinkedList가 삽입이 빠르다? 테스트했는데 ArrayList가 더 빠르던데요?</p>
+          <p class="blog-card-desc">LinkedList가 삽입이 빠르다고 알려져 있지만, 실제 벤치마크 결과가 달랐던 이유를 분석했습니다.</p>
+          <span class="blog-card-arrow">읽기 →</span>
+        </div>
       </a>
-      <a href="https://velog.io/@dreamdp01/posts" target="_blank" class="glass growth-link-card reveal"
-        style="transition-delay:.25s">
-        <span class="growth-link-num">→</span>
-        <span class="growth-link-title">전체 포스트 보기</span>
+
+      <a href="https://velog.io/@dreamdp01/posts" target="_blank" class="blog-card blog-card-cta reveal"
+        style="transition-delay:.35s">
+        <div class="blog-card-cta-inner">
+          <span class="blog-card-cta-arrow">→</span>
+          <p class="blog-card-cta-label">전체 포스트 보기</p>
+          <p class="blog-card-cta-sub">velog.io/@dreamdp01</p>
+        </div>
       </a>
+
     </div>
   </section>
 
