@@ -104,7 +104,7 @@ function initSparkles() {
   hero.insertBefore(canvas, hero.firstChild);
 
   const ctx = canvas.getContext('2d');
-  const COLOR = '123, 158, 255';
+  const COLOR = '180, 200, 255';
   const DENSITY = 80;
 
   let particles = [];

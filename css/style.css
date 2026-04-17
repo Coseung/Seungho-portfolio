@@ -324,6 +324,24 @@ section {
   border-radius: 0;
   background: transparent;
 }
+.project-detail-link {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 24px;
+  font-size: .8rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: .06em;
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 6px;
+  padding: 7px 16px;
+  transition: background .2s, border-color .2s;
+}
+.project-detail-link:hover {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.5);
+}
 .project-card.highlighted::before {
   content: '★ 주요 프로젝트';
   display: inline-block; font-size: .66rem; font-weight: 700;
