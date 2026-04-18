@@ -52,11 +52,6 @@ function getCompanySlug() {
 // ─── 회사 JSON 로드 ──────────────────────────────────
 async function loadCompanyConfig(slug) {
   try {
-    // 상대 경로: 어느 depth에서도 data/companies/ 를 찾을 수 있도록
-    const base = window.location.pathname.endsWith('/')
-      ? window.location.pathname
-      : window.location.pathname.replace(/\/[^/]*$/, '/');
-    // 루트 기준으로 절대 경로 구성
     const url = `/data/companies/${slug}.json`;
 
     const res = await fetch(url);
@@ -150,6 +145,13 @@ function renderCoverLetter({ title, body }, meta = {}) {
 async function init() {
   const slug = getCompanySlug();
   if (!slug) return; // 기본 포트폴리오: 정적 HTML 그대로 표시
+
+  // JSON fetch 전에 먼저 링크 업데이트 (fetch 대기 중 클릭해도 ?c= 유지)
+  document.querySelectorAll('.project-detail-link').forEach(a => {
+    const url = new URL(a.href, window.location.href);
+    url.searchParams.set('c', slug);
+    a.href = url.toString();
+  });
 
   const config = await loadCompanyConfig(slug);
   if (config) applyConfig(config);
