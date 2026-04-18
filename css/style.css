@@ -6,9 +6,9 @@
   --bg-card-hover: rgba(255,255,255,0.06);
   --border: rgba(255,255,255,0.07);
   --border-hover: rgba(255,255,255,0.14);
-  --accent: #2F2FE4;
-  --accent-dim: rgba(47,47,228,0.1);
-  --accent-border: rgba(47,47,228,0.28);
+  --accent: #0045DB;
+  --accent-dim: rgba(0,69,219,0.1);
+  --accent-border: rgba(0,69,219,0.28);
   --text-primary: #ffffff;
   --text-secondary: #8888a0;
   --text-muted: #44445a;

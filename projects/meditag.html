@@ -28,47 +28,284 @@
         <div>
           <div class="detail-tag">NFC 기반 복약관리 앱 · 백엔드 &amp; 인프라 (5인)</div>
           <h1 class="detail-title">메디태그</h1>
-          <p class="detail-subtitle">시각장애인이 시간대별 복용해야 할 약의 종류를 혼동하는 문제를 해결하기 위한 NFC 기반 복약관리 프로그램</p>
+          <p class="detail-subtitle">시각장애인이 복약 시 시간대별로 복용해야 할 약의 종류를 혼동하는 문제를 해결하기 위한 어플리케이션</p>
           <div class="detail-meta-row">
-            <span class="detail-period">2024.07 – 2025.10 · Spring Boot · Java · Flutter · AWS EC2 · RDS · S3 · Redis</span>
+            <span class="detail-period">2024.09.01 – 2025.10.22</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 내용 섹션들 (추후 작성) -->
-    <section class="detail-section glass">
+    <!-- 프로젝트 개요 -->
+    <section class="detail-section">
       <h2 class="detail-section-title">프로젝트 개요</h2>
-      <p class="detail-placeholder">내용을 추가해주세요.</p>
+
+      <div class="detail-info-grid">
+        <div class="detail-info-item">
+          <div class="detail-info-label">기간</div>
+          <div class="detail-info-value">2024.09.01 ~ 2025.10.22</div>
+        </div>
+        <div class="detail-info-item">
+          <div class="detail-info-label">소속 / 담당 분야</div>
+          <div class="detail-info-value">성결대학교 졸업작품 팀 프로젝트 (5인)<br>백엔드 개발 &amp; AWS 인프라 구축</div>
+        </div>
+        <div class="detail-info-item">
+          <div class="detail-info-label">서비스 목표</div>
+          <div class="detail-info-value">시각장애인이 스스로 약을 구분하고, 정해진 시간에 올바르게 복용할 수 있도록 돕는 것을 목표로 함</div>
+        </div>
+      </div>
+
+      <div class="detail-tech-list">
+        <span class="detail-tech-item">Java</span>
+        <span class="detail-tech-item">Spring Boot</span>
+        <span class="detail-tech-item">Flutter</span>
+        <span class="detail-tech-item">AWS (RDS, S3, EC2)</span>
+        <span class="detail-tech-item">Redis</span>
+      </div>
+
+      <div style="display:flex; gap:10px; flex-wrap:wrap;">
+        <a href="https://www.youtube.com/watch?si=XWTxodZis9xravd0&v=FvtcBnEVngo&feature=youtu.be"
+          class="detail-link-btn" target="_blank" rel="noopener" style="margin-bottom: 20px;"> 시연영상 바로가기
+          (Youtube)</a>
+        <a href="https://github.com/Coseung/MediTag-BE" class="detail-link-btn" target="_blank" rel="noopener"
+          style="margin-bottom: 20px;"> 소스코드 보기
+          (GitHub)</a>
+      </div>
     </section>
 
-    <section class="detail-section glass">
-      <h2 class="detail-section-title">담당 역할</h2>
-      <p class="detail-placeholder">내용을 추가해주세요.</p>
+    <!-- 담당 기능 및 구현 범위 -->
+    <section class="detail-section">
+      <h2 class="detail-section-title">담당 기능 및 구현 범위</h2>
+
+      <img src="../assets/detailImg/메디태그 아키텍쳐.jpg" alt="메디태그 아키텍쳐" class="detail-img" />
+
+      <div class="detail-feature-group">
+        <div class="detail-feature-title">AWS 인프라 구축 및 배포</div>
+        <ul class="detail-list">
+          <li>EC2 서버 배포, RDS 데이터베이스 구축, S3 파일 스토리지 연동</li>
+          <li>AWS RDS 마이그레이션으로 팀 전체 실시간 데이터 공유 환경 구축</li>
+          <li>S3 Presigned URL 기반 파일 업로드 최적화</li>
+        </ul>
+      </div>
+
+      <div class="detail-feature-group">
+        <div class="detail-feature-title">복약 알림 스케줄러 시스템 구현</div>
+        <ul class="detail-list">
+          <li><strong>Spring TaskScheduler</strong>를 활용한 복용 시간 기반 푸시 알림 자동 예약</li>
+        </ul>
+      </div>
+
+      <div class="detail-feature-group">
+        <div class="detail-feature-title">보호자 SMS 알림 시스템</div>
+        <ul class="detail-list">
+          <li><strong>CoolSMS API</strong> 연동으로 복용 완료 시 보호자에게 실시간 문자 전송</li>
+          <li>보호자 등록·수정·삭제 CRUD 기능 구현</li>
+        </ul>
+      </div>
+
+      <div class="detail-feature-group">
+        <div class="detail-feature-title">OAuth 2.0 소셜 로그인 (네이버, 카카오)</div>
+        <ul class="detail-list">
+          <li>OAuth 2.0 소셜 로그인 기능 구현 및 사용자 경험 증대</li>
+          <li>JWT 기반 인증 시스템 구축</li>
+        </ul>
+      </div>
+
+      <div class="detail-feature-group">
+        <div class="detail-feature-title">약 즐겨찾기 기능</div>
+        <ul class="detail-list">
+          <li>자주 복용하는 약을 즐겨찾기로 관리하는 기능 구현</li>
+        </ul>
+      </div>
     </section>
 
-    <section class="detail-section glass">
-      <h2 class="detail-section-title">핵심 구현 내용</h2>
-      <p class="detail-placeholder">내용을 추가해주세요.</p>
+    <!-- 알림 등록 및 음성 저장 -->
+    <section class="detail-section">
+      <h2 class="detail-section-title">알림 등록 및 약사 주의사항 음성 저장 기능 구현</h2>
+
+      <p style="font-size:.875rem; color:var(--text-secondary); line-height:1.65; margin-bottom:20px;">
+        회원이 약 복용 알림을 등록하고, 약사가 안내하는 주의사항을 음성으로 녹음해 저장할 수 있는 기능을 구현<br><br>
+        시각장애인이 약 복용 중 주의해야 할 내용을 필요할 때마다 반복해서 들을 수 있도록 구성
+      </p>
+
+      <img src="../assets/detailImg/알림등록_주의사항.jpg" alt="알림 등록 및 주의사항 음성 저장" class="detail-img" />
     </section>
 
-    <section class="detail-section glass">
+    <!-- SMS 복용 알림 -->
+    <section class="detail-section">
+      <h2 class="detail-section-title">SMS 복용 알림 기능 구현</h2>
+
+      <p style="font-size:.875rem; color:var(--text-secondary); line-height:1.65; margin-bottom:20px;">
+        회원이 약을 복용 완료로 변경하면, 보호자에게 해당 정보를 실시간으로 전달하는 기능을 구현했습니다.<br><br>
+        보호자의 전화번호·회원 이름·약 이름을 기반으로 <strong>CoolSMS API</strong>를 호출해 문자 알림을 전송하도록 구성했으며, 이를 통해 보호자가 복용 현황을 즉시 확인하고 모니터링할
+        수 있도록 지원했습니다.
+      </p>
+
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:8px;">
+        <div
+          style="height:340px; border-radius:10px; border:1px solid var(--border); overflow:hidden; background:#0a0a14; cursor:zoom-in;">
+          <img src="../assets/detailImg/SMS복용알림1.jpg" alt="SMS 복용 알림 1" class="zoomable"
+            style="width:100%; height:100%; object-fit:contain; display:block;" />
+        </div>
+        <div
+          style="height:340px; border-radius:10px; border:1px solid var(--border); overflow:hidden; background:#0a0a14; cursor:zoom-in;">
+          <img src="../assets/detailImg/SMS 복용알림.jpg" alt="SMS 복용 알림 2" class="zoomable"
+            style="width:100%; height:100%; object-fit:contain; display:block;" />
+        </div>
+      </div>
+    </section>
+
+    <!-- 트러블슈팅 -->
+    <section class="detail-section">
       <h2 class="detail-section-title">트러블슈팅</h2>
-      <p class="detail-placeholder">내용을 추가해주세요.</p>
-    </section>
 
-    <section class="detail-section glass">
-      <h2 class="detail-section-title">회고</h2>
-      <p class="detail-placeholder">내용을 추가해주세요.</p>
+      <!-- 1. S3 Presigned URL -->
+      <div class="trouble-block">
+        <div class="trouble-block-title">S3 Presigned URL 기반 음성·이미지 업로드 구조 개선</div>
+        <div class="trouble-row">
+          <span class="trouble-label problem">문제점</span>
+          <div class="trouble-content">
+            <ul>
+              <li>기존 업로드 방식: <strong>클라이언트 → 서버 → S3</strong></li>
+              <li>파일 크기에 따라 서버가 동일 파일을 두 번 처리해야 해 네트워크 I/O가 2배로 증가</li>
+              <li>대용량 파일 업로드 시 서버의 메모리·트래픽·CPU 사용량 증가로 성능 저하 우려</li>
+            </ul>
+          </div>
+        </div>
+        <div class="trouble-row">
+          <span class="trouble-label solution">해결</span>
+          <div class="trouble-content">
+            <ul>
+              <li>클라이언트가 S3에 직접 업로드하도록 <strong>Presigned URL</strong> 방식 적용</li>
+              <li>서버는 파일 자체를 처리하지 않고 <strong>메타데이터만 관리</strong>하도록 구조 개선</li>
+            </ul>
+          </div>
+        </div>
+        <div class="trouble-row">
+          <span class="trouble-label result">결과</span>
+          <div class="trouble-content">
+            <ul>
+              <li>서버의 파일 처리 의존도 <strong>0%</strong>로 전환</li>
+              <li>네트워크 I/O 기존 대비 약 <strong>50% 감소</strong></li>
+              <li>업로드 성능 안정화 및 서버 부하 대폭 감소</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. 만료된 알림 지속 발송 -->
+      <div class="trouble-block">
+        <div class="trouble-block-title">만료된 알림 지속 발송 문제</div>
+
+        <div class="img-placeholder" style="min-height:180px; margin-bottom:20px;">
+          <span class="img-placeholder-icon">🖼</span>
+          <span>알림 기능 화면 이미지 추가예정</span>
+        </div>
+
+        <p style="font-size:.875rem; color:var(--text-secondary); line-height:1.65; margin-bottom:16px;">
+          시각장애인이 복용 시간을 놓치지 않도록, 사용자가 등록한 복용 시간에 맞춰 알림을 제공하는 기능을 구현했습니다. Spring 스케줄러를 활용해 약 복용 시간을 기준으로 알림을 자동 예약·발송하도록
+          설계하여, 사용자가 직접 시간을 확인하지 않아도 복약 리마인드를 받을 수 있도록 했습니다.
+        </p>
+
+        <div class="trouble-row">
+          <span class="trouble-label problem">문제점</span>
+          <div class="trouble-content">
+            <ul>
+              <li>복용 종료일 이후에도 알림이 계속 발송되는 오류 발생</li>
+              <li>종료된 복약에 대한 불필요한 알림으로 사용자 혼란 발생</li>
+            </ul>
+          </div>
+        </div>
+        <div class="trouble-row">
+          <span class="trouble-label solution">해결</span>
+          <div class="trouble-content">
+            <ul>
+              <li>알림 시간이 현재 시각보다 이전이거나 유효 기간(<strong>endDate</strong>)을 벗어난 경우 스케줄링하지 않도록 검증 로직 추가</li>
+              <li>복용 종료일 다음 날 모든 알림을 자동 취소하는 기능 구현</li>
+            </ul>
+          </div>
+        </div>
+        <div class="trouble-row">
+          <span class="trouble-label result">결과</span>
+          <div class="trouble-content">
+            <ul>
+              <li>만료된 복약 알림의 지속 발송 문제 완전 제거</li>
+              <li>알림 신뢰도 및 사용자 경험 개선</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. EC2 타임존 -->
+      <div class="trouble-block">
+        <div class="trouble-block-title">서버 시간대 문제로 인한 알림 지연</div>
+        <div class="trouble-row">
+          <span class="trouble-label problem">문제점</span>
+          <div class="trouble-content">
+            <ul>
+              <li>EC2 서버 기본 시간대가 서울 기준이 아니어서 알림이 최대 <strong>9시간 지연</strong> 발송되는 문제 발생</li>
+            </ul>
+          </div>
+        </div>
+        <div class="trouble-row">
+          <span class="trouble-label solution">해결</span>
+          <div class="trouble-content">
+            <ul>
+              <li>서버 타임존을 <strong>Asia/Seoul</strong> 기준으로 재설정</li>
+            </ul>
+          </div>
+        </div>
+        <div class="trouble-row">
+          <span class="trouble-label result">결과</span>
+          <div class="trouble-content">
+            <ul>
+              <li>사용자 설정 시간에 맞춰 알림이 <strong>9시간 지연 → 0초</strong> 정확히 발송되도록 정상화</li>
+              <li>시간 기반 기능의 신뢰성 확보</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </section>
 
   </main>
 
-  <footer style="text-align:center">
+  <footer>
     <p>© 2026 <span>최승호</span> · Backend Developer</p>
   </footer>
 
+  <!-- Lightbox -->
+  <div id="lightbox"
+    style="display:none; position:fixed; inset:0; background:rgba(0,0,0,.85); z-index:9999; align-items:center; justify-content:center; cursor:zoom-out; backdrop-filter:blur(6px);">
+    <img id="lightbox-img" src="" alt=""
+      style="max-width:90vw; max-height:90vh; object-fit:contain; border-radius:10px; box-shadow:0 0 60px rgba(0,0,0,.6);" />
+  </div>
+
   <script src="../js/animations.js"></script>
+  <script>
+    const lb = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lightbox-img');
+
+    document.querySelectorAll('.zoomable').forEach(img => {
+      img.addEventListener('click', () => {
+        lbImg.src = img.src;
+        lbImg.alt = img.alt;
+        lb.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    lb.addEventListener('click', () => {
+      lb.style.display = 'none';
+      document.body.style.overflow = '';
+    });
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') {
+        lb.style.display = 'none';
+        document.body.style.overflow = '';
+      }
+    });
+  </script>
 </body>
 
 </html>
