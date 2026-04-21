@@ -28,7 +28,7 @@
         <div>
           <div class="detail-tag">NFC 기반 복약관리 앱 · 백엔드 &amp; 인프라 (5인)</div>
           <h1 class="detail-title">메디태그</h1>
-          <p class="detail-subtitle">시각장애인이 복약 시 시간대별로 복용해야 할 약의 종류를 혼동하는 문제를 해결하기 위한 어플리케이션</p>
+          <p class="detail-subtitle">시각장애인이 복약 시 시간대별로 복용해야 할 약의 종류를 혼동하는 문제를 해결하기 위한 NFC 기반 복약관리 어플리케이션</p>
           <div class="detail-meta-row">
             <span class="detail-period">2024.09.01 – 2025.10.22</span>
           </div>
@@ -141,15 +141,10 @@
         수 있도록 지원했습니다.
       </p>
 
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:8px;">
+      <div style="display:flex; justify-content:center; margin-bottom:8px;">
         <div
-          style="height:340px; border-radius:10px; border:1px solid var(--border); overflow:hidden; background:#0a0a14; cursor:zoom-in;">
+          style="width:50%; height:340px; border-radius:10px; border:1px solid var(--border); overflow:hidden; background:#0a0a14; cursor:zoom-in;">
           <img src="../assets/detailImg/SMS복용알림1.jpg" alt="SMS 복용 알림 1" class="zoomable"
-            style="width:100%; height:100%; object-fit:contain; display:block;" />
-        </div>
-        <div
-          style="height:340px; border-radius:10px; border:1px solid var(--border); overflow:hidden; background:#0a0a14; cursor:zoom-in;">
-          <img src="../assets/detailImg/SMS 복용알림.jpg" alt="SMS 복용 알림 2" class="zoomable"
             style="width:100%; height:100%; object-fit:contain; display:block;" />
         </div>
       </div>
@@ -167,7 +162,7 @@
           <div class="trouble-content">
             <ul>
               <li>기존 업로드 방식: <strong>클라이언트 → 서버 → S3</strong></li>
-              <li>파일 크기에 따라 서버가 동일 파일을 두 번 처리해야 해 네트워크 I/O가 2배로 증가</li>
+              <li>파일 크기에 따라 서버가 <strong>동일 파일을 두 번 처리</strong>해야 해 네트워크 I/O가 2배로 증가</li>
               <li>대용량 파일 업로드 시 서버의 메모리·트래픽·CPU 사용량 증가로 성능 저하 우려</li>
             </ul>
           </div>
@@ -176,8 +171,7 @@
           <span class="trouble-label solution">해결</span>
           <div class="trouble-content">
             <ul>
-              <li>클라이언트가 S3에 직접 업로드하도록 <strong>Presigned URL</strong> 방식 적용</li>
-              <li>서버는 파일 자체를 처리하지 않고 <strong>메타데이터만 관리</strong>하도록 구조 개선</li>
+              <li>클라이언트가 S3에 직접 업로드하도록 <strong>Presigned URL 방식 적용</strong></li>
             </ul>
           </div>
         </div>
@@ -185,7 +179,7 @@
           <span class="trouble-label result">결과</span>
           <div class="trouble-content">
             <ul>
-              <li>서버의 파일 처리 의존도 <strong>0%</strong>로 전환</li>
+              <li>서버의 파일 처리 의존도 <strong>대폭 저하</strong></li>
               <li>네트워크 I/O 기존 대비 약 <strong>50% 감소</strong></li>
               <li>업로드 성능 안정화 및 서버 부하 대폭 감소</li>
             </ul>
@@ -197,9 +191,10 @@
       <div class="trouble-block">
         <div class="trouble-block-title">만료된 알림 지속 발송 문제</div>
 
-        <div class="img-placeholder" style="min-height:180px; margin-bottom:20px;">
-          <span class="img-placeholder-icon">🖼</span>
-          <span>알림 기능 화면 이미지 추가예정</span>
+        <div
+          style="height:340px; border-radius:10px; border:1px solid var(--border); overflow:hidden; background:#0a0a14; cursor:zoom-in; margin-bottom:20px;">
+          <img src="../assets/detailImg/SMS 복용알림.jpg" alt="SMS 복용 알림 2" class="zoomable"
+            style="width:100%; height:100%; object-fit:contain; display:block;" />
         </div>
 
         <p style="font-size:.875rem; color:var(--text-secondary); line-height:1.65; margin-bottom:16px;">
@@ -211,7 +206,7 @@
           <span class="trouble-label problem">문제점</span>
           <div class="trouble-content">
             <ul>
-              <li>복용 종료일 이후에도 알림이 계속 발송되는 오류 발생</li>
+              <li>복용 종료일 <strong>이후에도 알림이 계속 발송되는 오류 발생</strong></li>
               <li>종료된 복약에 대한 불필요한 알림으로 사용자 혼란 발생</li>
             </ul>
           </div>
@@ -220,7 +215,7 @@
           <span class="trouble-label solution">해결</span>
           <div class="trouble-content">
             <ul>
-              <li>알림 시간이 현재 시각보다 이전이거나 유효 기간(<strong>endDate</strong>)을 벗어난 경우 스케줄링하지 않도록 검증 로직 추가</li>
+              <li>알림 시간이 현재 시각보다 이전이거나 <strong>유효 기간(endDate)을 벗어난 경우 스케줄링하지 않도록</strong> 검증 로직 추가</li>
               <li>복용 종료일 다음 날 모든 알림을 자동 취소하는 기능 구현</li>
             </ul>
           </div>
@@ -229,42 +224,14 @@
           <span class="trouble-label result">결과</span>
           <div class="trouble-content">
             <ul>
-              <li>만료된 복약 알림의 지속 발송 문제 완전 제거</li>
+              <li>만료된 복약 알림의 <strong>지속 발송 문제 완전 제거</strong></li>
               <li>알림 신뢰도 및 사용자 경험 개선</li>
             </ul>
           </div>
         </div>
       </div>
 
-      <!-- 3. EC2 타임존 -->
-      <div class="trouble-block">
-        <div class="trouble-block-title">서버 시간대 문제로 인한 알림 지연</div>
-        <div class="trouble-row">
-          <span class="trouble-label problem">문제점</span>
-          <div class="trouble-content">
-            <ul>
-              <li>EC2 서버 기본 시간대가 서울 기준이 아니어서 알림이 최대 <strong>9시간 지연</strong> 발송되는 문제 발생</li>
-            </ul>
-          </div>
-        </div>
-        <div class="trouble-row">
-          <span class="trouble-label solution">해결</span>
-          <div class="trouble-content">
-            <ul>
-              <li>서버 타임존을 <strong>Asia/Seoul</strong> 기준으로 재설정</li>
-            </ul>
-          </div>
-        </div>
-        <div class="trouble-row">
-          <span class="trouble-label result">결과</span>
-          <div class="trouble-content">
-            <ul>
-              <li>사용자 설정 시간에 맞춰 알림이 <strong>9시간 지연 → 0초</strong> 정확히 발송되도록 정상화</li>
-              <li>시간 기반 기능의 신뢰성 확보</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+
     </section>
 
   </main>
