@@ -301,7 +301,6 @@
   margin-bottom: 24px;
 }
 
-.detail-info-item {}
 
 .detail-info-label {
   font-size: .68rem;
@@ -398,4 +397,26 @@ body>footer {
   .trouble-row {
     grid-template-columns: 60px 1fr;
   }
+}
+
+/* ── Slider mode overrides ── */
+/* Prevent detail-wrap's flex gap from interfering */
+.detail-wrap.slider-mode {
+  gap: 0;
+}
+
+/* Section inside a slide: remove side padding (slide handles it) */
+.slider-slide .detail-wrap section,
+.slider-slide section {
+  padding-left: 0;
+  padding-right: 0;
+  max-width: none;
+  margin: 0;
+}
+
+/* Reset bottom border on sections inside slides */
+.slider-slide .detail-section {
+  border-bottom: none;
+  padding-top: 12px;
+  padding-bottom: 16px;
 }

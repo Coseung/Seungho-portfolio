@@ -8,231 +8,242 @@
   <link rel="icon" href="../assets/img/3d아이콘.png" type="image/png" />
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="stylesheet" href="../css/project-detail.css" />
+  <link rel="stylesheet" href="../css/slider.css" />
 </head>
 
 <body>
   <div class="gradient-bg"></div>
 
-  <!-- NAV -->
   <nav>
     <a href="../index.html" class="nav-logo nav-back">← 포트폴리오로 돌아가기</a>
     <span class="nav-project-title">스레드 자동화</span>
   </nav>
 
-  <main class="detail-wrap">
+  <main class="detail-wrap slider-mode">
+    <div class="slider-outer">
+      <div class="slider-track">
 
-    <!-- HERO -->
-    <section class="detail-hero">
-      <div class="detail-hero-inner">
-        <img src="../assets/img/threadimage.png" alt="Threads" class="detail-project-icon" />
-        <div>
-          <div class="detail-tag">SNS 자동화 툴 · 개인 제작 · 판매</div>
-          <h1 class="detail-title">스레드 자동화 프로그램</h1>
-          <p class="detail-subtitle">팔로워 증가를 위해 하루 수십차례 반복되던 스하리(좋아요, 리포스트, 댓글, 팔로우)를 자동화한 프로그램 제작 및 판매</p>
-          <div class="detail-meta-row">
-            <span class="detail-period">2025.04.15 ~ 유지보수 진행중</span>
+        <!-- ── Slide 1 : 프로젝트 개요 ── -->
+        <div class="slider-slide">
+          <span class="slide-label">01 · 프로젝트 개요</span>
+          <div class="slide-inner">
+
+            <section class="detail-hero">
+              <div class="detail-hero-inner">
+                <img src="../assets/img/threadimage.png" alt="Threads" class="detail-project-icon" />
+                <div>
+                  <div class="detail-tag">SNS 자동화 툴 · 개인 제작 · 판매</div>
+                  <h1 class="detail-title">스레드 자동화 프로그램</h1>
+                  <p class="detail-subtitle">팔로워 증가를 위해 하루 수십차례 반복되던 스하리(좋아요, 리포스트, 댓글, 팔로우)를 자동화한 프로그램 제작 및 판매</p>
+                  <div class="detail-meta-row">
+                    <span class="detail-period">2025.04.15 ~ 유지보수 진행중</span>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="detail-section">
+              <h2 class="detail-section-title">프로젝트 개요</h2>
+
+              <div class="detail-info-grid">
+                <div class="detail-info-item">
+                  <div class="detail-info-label">기간</div>
+                  <div class="detail-info-value">2025.04.15 ~ 유지보수 진행중</div>
+                </div>
+                <div class="detail-info-item">
+                  <div class="detail-info-label">유형</div>
+                  <div class="detail-info-value">개인 프로젝트 (제작 및 판매)</div>
+                </div>
+              </div>
+
+              <div class="detail-tech-list">
+                <span class="detail-tech-item">Python</span>
+                <span class="detail-tech-item">Selenium</span>
+              </div>
+
+              <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                <a href="https://www.threads.com/@chamiroom" class="detail-link-btn" target="_blank" rel="noopener">스레드 계정 링크 (Threads)</a>
+                <a href="https://classy-watcher-2c2.notion.site/1e3743eb5fc8806f928feb3da52566b5?source=copy_link" class="detail-link-btn" target="_blank" rel="noopener">실제 판매 notion 링크 보기</a>
+              </div>
+            </section>
+
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- 프로젝트 개요 -->
-    <section class="detail-section">
-      <h2 class="detail-section-title">프로젝트 개요</h2>
+        <!-- ── Slide 2 : 문제점 & 해결 ── -->
+        <div class="slider-slide">
+          <span class="slide-label">02 · 문제점 &amp; 해결</span>
+          <div class="slide-inner">
 
-      <div class="detail-info-grid">
-        <div class="detail-info-item">
-          <div class="detail-info-label">기간</div>
-          <div class="detail-info-value">2025.04.15 ~ 유지보수 진행중</div>
-        </div>
-        <div class="detail-info-item">
-          <div class="detail-info-label">유형</div>
-          <div class="detail-info-value">개인 프로젝트 (제작 및 판매)</div>
-        </div>
-      </div>
+            <section class="detail-section">
+              <h2 class="detail-section-title">문제점 &amp; 해결</h2>
 
-      <div class="detail-tech-list">
-        <span class="detail-tech-item">Python</span>
-        <span class="detail-tech-item">Selenium</span>
-      </div>
+              <img src="../assets/detailImg/스레드개요.jpg" alt="스레드 자동화 개요" class="detail-img" />
 
-      <div style="display:flex; gap:10px; flex-wrap:wrap;">
-        <a href="https://www.threads.com/@chamiroom" class="detail-link-btn" target="_blank" rel="noopener"> 스레드 계정 링크
-          (Threads)</a>
-        <a href="https://classy-watcher-2c2.notion.site/1e3743eb5fc8806f928feb3da52566b5?source=copy_link"
-          class="detail-link-btn" target="_blank" rel="noopener"> 실제 판매 notion 링크 보기</a>
-      </div>
-    </section>
+              <div class="trouble-block" style="margin-top:12px;">
+                <div class="trouble-row">
+                  <span class="trouble-label problem">문제점</span>
+                  <div class="trouble-content">
+                    <ul>
+                      <li>스레드 사용자들은 팔로워를 늘리기 위해 하루 수십차례 <strong>스하리(좋아요, 리포스트, 댓글, 팔로우)를 반복</strong></li>
+                      <li>스하리를 최대한 많이 하여 상대방의 팔로우를 유도하는 방식으로 팔로워를 모음</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="trouble-row" style="margin-top:8px;">
+                  <span class="trouble-label" style="background:rgba(255,255,255,.05);color:var(--text-secondary);border:1px solid var(--border);">요구사항</span>
+                  <div class="trouble-content">
+                    <ul>
+                      <li>반복되는 스하리를 클릭 한번으로 자동화</li>
+                      <li>실제 사용자 피드백 반영 (댓글 기능 추가, 스크롤 딜레이 적용 요구)</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="trouble-row" style="margin-top:8px;">
+                  <span class="trouble-label solution">해결</span>
+                  <div class="trouble-content">
+                    <ul>
+                      <li>웹 브라우저 자동화 도구 <strong>Python Selenium</strong> 선택</li>
+                      <li>다수 사용자가 손쉽게 실행할 수 있도록 <strong>Windows 실행 파일(.exe)</strong>로 패키징하여 별도 개발 환경 없이 실행 가능</li>
+                      <li>사용자 피드백 반영하여 댓글 기능 및 스크롤 딜레이 기능 추가 개선</li>
+                      <li>개선 후 활성 사용자 <strong>12명 → 25명으로 약 2배 증가</strong> (전체 사용자 32명)</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </section>
 
-    <!-- 문제점 & 해결 -->
-    <section class="detail-section">
-      <h2 class="detail-section-title">문제점 &amp; 해결</h2>
-
-      <img src="../assets/detailImg/스레드개요.jpg" alt="스레드 자동화 개요" class="detail-img" />
-
-      <div class="trouble-block" style="margin-top:24px;">
-        <div class="trouble-row">
-          <span class="trouble-label problem">문제점</span>
-          <div class="trouble-content">
-            <ul>
-              <li>스레드 사용자들은 팔로워를 늘리기 위해 하루 수십차례 <strong>스하리(좋아요, 리포스트, 댓글, 팔로우)를 반복</strong></li>
-              <li>스레드 사용자들은 스하리를 하여 댓글을 달면 상대방이 반대로 팔로우를 해주는 룰이 있음</li>
-              <li>스하리를 최대한 많이 하여 돌아오는 팔로우로 팔로워를 모음</li>
-            </ul>
           </div>
         </div>
-        <div class="trouble-row" style="margin-top:8px;">
-          <span class="trouble-label"
-            style="background:rgba(255,255,255,.05);color:var(--text-secondary);border:1px solid var(--border);">요구사항</span>
-          <div class="trouble-content">
-            <ul>
-              <li>반복되는 스하리를 클릭 한번으로 자동화</li>
-              <li>실제 사용자 피드백 반영 (댓글 기능 추가, 스크롤 딜레이 적용 요구)</li>
-            </ul>
+
+        <!-- ── Slide 3 : 프로그램 기능 ── -->
+        <div class="slider-slide">
+          <span class="slide-label">03 · 프로그램 기능</span>
+          <div class="slide-inner">
+
+            <section class="detail-section">
+              <h2 class="detail-section-title">프로그램 기능</h2>
+
+              <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:20px;">
+                <div>
+                  <p style="font-size:.72rem; color:var(--text-muted); margin-bottom:6px;">무료 버전</p>
+                  <div style="height:200px; border-radius:10px; border:1px solid var(--border); overflow:hidden; background:#0a0a14; cursor:zoom-in;">
+                    <img src="../assets/detailImg/무료버전.png" alt="무료 버전 화면" class="zoomable" style="width:100%; height:100%; object-fit:contain; display:block;" />
+                  </div>
+                </div>
+                <div>
+                  <p style="font-size:.72rem; color:var(--text-muted); margin-bottom:6px;">유료 버전</p>
+                  <div style="height:200px; border-radius:10px; border:1px solid var(--border); overflow:hidden; background:#0a0a14; cursor:zoom-in;">
+                    <img src="../assets/detailImg/유료버전.jpg" alt="유료 버전 화면" class="zoomable" style="width:100%; height:100%; object-fit:contain; display:block;" />
+                  </div>
+                </div>
+              </div>
+
+              <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px;">
+                <div>
+                  <div class="detail-feature-title">무료 버전</div>
+                  <ul class="detail-list">
+                    <li>고정 키워드 게시물 자동 찾기 및 처리</li>
+                    <li>자동 팔로우 / 좋아요 / 리포스트</li>
+                    <li>사용자 지정 댓글 자동 작성 (한줄 텍스트)</li>
+                    <li>스하리 수: <strong>15~35개 제한</strong></li>
+                    <li>스크롤 횟수: <strong>6번으로 제한</strong></li>
+                  </ul>
+                </div>
+                <div>
+                  <div class="detail-feature-title">유료 버전</div>
+                  <ul class="detail-list">
+                    <li>무료 버전 기능 포함</li>
+                    <li>키워드 직접 작성 / 스크롤 횟수 조정</li>
+                    <li>스하리 수: <strong>120개 이상 가능</strong></li>
+                    <li>딜레이 시간 조정 (계정 안전 목적)</li>
+                    <li>댓글 txt 파일 첨부 + 랜덤 작성</li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+
           </div>
         </div>
-        <div class="trouble-row" style="margin-top:8px;">
-          <span class="trouble-label solution">해결</span>
-          <div class="trouble-content">
-            <ul>
-              <li>웹 브라우저에서 자동으로 테스트를 실행할 수 있게 도와주는 도구 <strong>Python Selenium</strong>을 선택</li>
-              <li>다수 사용자가 손쉽게 실행할 수 있도록 <strong>Windows 실행 파일(.exe)</strong>로 패키징하여 별도 개발 환경 없이 실행 가능하게 구성</li>
-              <li>사용자 피드백 반영하여 댓글 기능 및 스크롤 딜레이 기능 추가 개선</li>
-              <li>개선 후 활성 사용자 <strong>12명 → 25명으로 약 2배 증가</strong> (전체 사용자 32명)</li>
-            </ul>
+
+        <!-- ── Slide 4 : 수익화 단계 ── -->
+        <div class="slider-slide">
+          <span class="slide-label">04 · 수익화 단계</span>
+          <div class="slide-inner">
+
+            <section class="detail-section">
+              <h2 class="detail-section-title">수익화 단계</h2>
+
+              <img src="../assets/detailImg/스레드수익화 단계.jpg" alt="수익화 단계" class="detail-img" />
+
+              <div class="detail-feature-group">
+                <div class="detail-feature-title">접근 방식</div>
+                <ul class="detail-list">
+                  <li><strong style="color:#fff;">무료 배포 → 유료 전환</strong> 흐름으로 설계하여 초기 진입 장벽 최소화</li>
+                  <li>처리량·설정 옵션을 제한하여 사용량이 늘수록 유료 버전이 필요해지도록 구성</li>
+                </ul>
+              </div>
+
+              <div class="detail-feature-group">
+                <div class="detail-feature-title">유입 방법</div>
+                <ul class="detail-list">
+                  <li>Threads 안내 글 게시 → <strong style="color:#fff;">댓글/DM으로</strong> 무료 사용법 Notion 페이지 링크 전달</li>
+                </ul>
+              </div>
+
+              <div class="detail-feature-group">
+                <div class="detail-feature-title">전환 유도 및 판매 진행</div>
+                <ul class="detail-list">
+                  <li>Notion 페이지에 <strong style="color:#fff;">유료 버전 기능과 차이점</strong>을 명확히 안내 → 업그레이드 문의로 이어지도록 구성</li>
+                  <li>구매 문의 및 거래는 <strong style="color:#fff;">오픈채팅</strong>으로 연결해 진행</li>
+                </ul>
+              </div>
+
+              <p style="font-size:.8rem; color:var(--text-muted); padding-top:12px; border-top:1px solid var(--border); line-height:1.6;">
+                Threads 게시물 게시 → 댓글/DM 응대 → Notion 가이드 전달 → 유료 기능 안내 → 오픈채팅 거래
+              </p>
+            </section>
+
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- 프로그램 기능 -->
-    <section class="detail-section">
-      <h2 class="detail-section-title">프로그램 기능</h2>
+        <!-- ── Slide 5 : 판매 결과 ── -->
+        <div class="slider-slide">
+          <span class="slide-label">05 · 판매 결과</span>
+          <div class="slide-inner">
 
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:28px;">
-        <div>
-          <p style="font-size:.75rem; color:var(--text-muted); margin-bottom:8px;">무료 버전</p>
-          <div
-            style="height:260px; border-radius:10px; border:1px solid var(--border); overflow:hidden; background:#0a0a14; cursor:zoom-in;">
-            <img src="../assets/detailImg/무료버전.png" alt="무료 버전 화면" class="zoomable"
-              style="width:100%; height:100%; object-fit:contain; display:block;" />
+            <section class="detail-section">
+              <h2 class="detail-section-title">판매 결과</h2>
+
+              <div class="detail-info-grid">
+                <div class="detail-info-item">
+                  <div class="detail-info-label">무료 버전 다운로드</div>
+                  <div class="detail-info-value"><strong style="color:#fff;font-size:1.6rem;">482명</strong></div>
+                </div>
+                <div class="detail-info-item">
+                  <div class="detail-info-label">유료 버전 구매</div>
+                  <div class="detail-info-value"><strong style="color:#fff;font-size:1.6rem;">31명</strong></div>
+                </div>
+                <div class="detail-info-item">
+                  <div class="detail-info-label">다운로드 대비 구매 전환율</div>
+                  <div class="detail-info-value"><strong style="color:#fff;font-size:1.6rem;">6.43%</strong></div>
+                </div>
+              </div>
+            </section>
+
           </div>
         </div>
-        <div>
-          <p style="font-size:.75rem; color:var(--text-muted); margin-bottom:8px;">유료 버전</p>
-          <div
-            style="height:260px; border-radius:10px; border:1px solid var(--border); overflow:hidden; background:#0a0a14; cursor:zoom-in;">
-            <img src="../assets/detailImg/유료버전.jpg" alt="유료 버전 화면" class="zoomable"
-              style="width:100%; height:100%; object-fit:contain; display:block;" />
-          </div>
-        </div>
+
       </div>
+    </div>
 
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-top:0;">
-        <div>
-          <div class="detail-feature-title">무료 버전 기능</div>
-          <ul class="detail-list">
-            <li>고정 키워드 "스하리 1000" 게시물 자동 찾기</li>
-            <li>게시물 추출, 자동 처리</li>
-            <li>자동 팔로우 기능</li>
-            <li>자동 좋아요 기능</li>
-            <li>자동 리포스트 기능</li>
-            <li>사용자 지정 댓글 자동 작성 (한줄 텍스트만 가능 이모티콘 불가)</li>
-            <li>실행당 스하리 수: <strong>15~35개 제한</strong></li>
-            <li>스크롤 횟수: <strong>6번으로 제한</strong></li>
-          </ul>
-        </div>
-        <div>
-          <div class="detail-feature-title">유료 버전 기능</div>
-          <ul class="detail-list">
-            <li>무료 버전 기능 포함</li>
-            <li>키워드 직접 작성</li>
-            <li>스크롤 횟수 조정 가능 (무료버전은 6번으로 제한)</li>
-            <li>실행당 스하리 수: <strong>120개 이상 가능</strong></li>
-            <li>딜레이 시간 조정 가능 (사람처럼 행동, 계정 안전 목적)</li>
-            <li>댓글 txt 파일 첨부 기능</li>
-            <li>입력, 첨부한 댓글 중 랜덤으로 작성</li>
-          </ul>
-        </div>
-      </div>
-
-      <p
-        style="font-size:.82rem; color:var(--text-secondary); margin-top:20px; margin-bottom: 20px; padding-top:16px; border-top:1px solid var(--border); line-height:1.7;">
-        <strong style="color: #fff;">무료/유료 버전은 설정 옵션의 범위</strong>(키워드, 스크롤, 딜레이, 처리량, 댓글 방식)를 <strong
-          style="color: #fff;">달리해</strong>,
-        <strong style="color: #fff;"> 무료는</strong> 체험용으로 핵심 기능을 <strong style="color: #fff;">제한</strong>
-        제공하고 <strong style="color: #fff;">유료는</strong> 대량 실행과 계정 안전을 고려한 <strong style="color: #fff;">고급 설정을
-          제공</strong>하도록
-        구성했다.
-      </p>
-    </section>
-
-    <!-- 수익화 단계 -->
-    <section class="detail-section">
-      <h2 class="detail-section-title">수익화 단계</h2>
-
-      <img src="../assets/detailImg/스레드수익화 단계.jpg" alt="수익화 단계" class="detail-img" />
-
-      <div class="detail-feature-group">
-        <div class="detail-feature-title" style="font-size: large;">접근 방식</div>
-        <ul class="detail-list">
-          <li>초기 진입장벽을 낮추기 위해 '바로 판매'가 아니라 <strong style="color: #fff;">무료 배포 → 유료 전환</strong> 흐름으로 설계</li>
-          <li>무료는 핵심 기능을 체험할 수 있게 제공하되 처리량·설정 옵션을 제한하여, 사용량이 늘수록 유료 버전이 필요해지도록 구성</li>
-        </ul>
-      </div>
-
-      <div class="detail-feature-group">
-        <div class="detail-feature-title" style="font-size: large;">유입 방법</div>
-        <ul class="detail-list">
-          <li>스레드(Threads)에 관심을 끌 수 있는 <strong style="color: #fff;">안내 글을 게시하고</strong>, <strong style="color: #fff;">댓글
-              및 SNS 메시지로</strong>
-            무료 사용법 Notion 페이지
-            링크를 전달</li>
-        </ul>
-      </div>
-
-      <div class="detail-feature-group">
-        <div class="detail-feature-title" style="font-size: large;">전환 유도</div>
-        <ul class="detail-list">
-          <li>무료 사용법 Notion 페이지에 <strong style="color: #fff;">유료 버전 기능과 차이점</strong>을 명확히 안내하여 업그레이드 문의로 이어지도록 구성</li>
-        </ul>
-      </div>
-
-      <div class="detail-feature-group">
-        <div class="detail-feature-title" style="font-size: large;">판매 진행</div>
-        <ul class="detail-list">
-          <li>구매 문의 및 거래는 오픈채팅으로 연결해 진행</li>
-        </ul>
-      </div>
-
-      <div class="detail-feature-group">
-        <div class="detail-feature-title">요약 프로세스</div>
-        <ul class="detail-list">
-          <li>Threads 게시물 게시 → 댓글/DM 응대 → Notion 가이드 전달 → 유료 기능 안내 → 오픈채팅 거래</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- 판매 결과 -->
-    <section class="detail-section">
-      <h2 class="detail-section-title">판매 결과</h2>
-
-      <div class="detail-info-grid">
-        <div class="detail-info-item">
-          <div class="detail-info-label">무료 버전</div>
-          <div class="detail-info-value"><strong style="color:#fff;font-size:1.4rem;">482명</strong> 다운로드</div>
-        </div>
-        <div class="detail-info-item">
-          <div class="detail-info-label">유료 버전</div>
-          <div class="detail-info-value"><strong style="color:#fff;font-size:1.4rem;">31명</strong> 구매</div>
-        </div>
-        <div class="detail-info-item">
-          <div class="detail-info-label">다운로드 대비 구매 전환율</div>
-          <div class="detail-info-value"><strong style="color:#fff;font-size:1.4rem;">6.43%</strong></div>
-        </div>
-      </div>
-    </section>
-
+    <!-- Controls -->
+    <div class="slider-controls">
+      <button class="slider-btn slider-prev" aria-label="이전 페이지">&#8249;</button>
+      <div class="slider-pagination"></div>
+      <span class="slider-counter"></span>
+      <button class="slider-btn slider-next" aria-label="다음 페이지">&#8250;</button>
+    </div>
   </main>
 
   <footer>
@@ -240,39 +251,14 @@
   </footer>
 
   <!-- Lightbox -->
-  <div id="lightbox"
-    style="display:none; position:fixed; inset:0; background:rgba(0,0,0,.85); z-index:9999; align-items:center; justify-content:center; cursor:zoom-out; backdrop-filter:blur(6px);">
-    <img id="lightbox-img" src="" alt=""
-      style="max-width:90vw; max-height:90vh; object-fit:contain; border-radius:10px; box-shadow:0 0 60px rgba(0,0,0,.6);" />
+  <div id="lightbox" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,.85); z-index:9999; align-items:center; justify-content:center; cursor:zoom-out; backdrop-filter:blur(6px);">
+    <img id="lightbox-img" src="" alt="" style="max-width:90vw; max-height:90vh; object-fit:contain; border-radius:10px; box-shadow:0 0 60px rgba(0,0,0,.6);" />
   </div>
 
   <script src="../js/animations.js"></script>
   <script src="../js/detail.js"></script>
-  <script>
-    const lb = document.getElementById('lightbox');
-    const lbImg = document.getElementById('lightbox-img');
-
-    document.querySelectorAll('.zoomable').forEach(img => {
-      img.addEventListener('click', () => {
-        lbImg.src = img.src;
-        lbImg.alt = img.alt;
-        lb.style.display = 'flex';
-        document.body.style.overflow = 'hidden';
-      });
-    });
-
-    lb.addEventListener('click', () => {
-      lb.style.display = 'none';
-      document.body.style.overflow = '';
-    });
-
-    document.addEventListener('keydown', e => {
-      if (e.key === 'Escape') {
-        lb.style.display = 'none';
-        document.body.style.overflow = '';
-      }
-    });
-  </script>
+  <script src="../js/slider.js"></script>
+  <script src="../js/lightbox.js"></script>
 </body>
 
 </html>
