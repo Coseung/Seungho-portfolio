@@ -56,34 +56,6 @@ function initCounters() {
   observer.observe(statsSection);
 }
 
-// ─── Nav: scroll opacity + active section highlight ──
-function initNav() {
-  const nav = document.querySelector('nav');
-  if (!nav) return;
-
-  // Scroll opacity
-  window.addEventListener('scroll', () => {
-    nav.style.background = window.scrollY > 80
-      ? 'rgba(7,7,15,0.92)'
-      : 'rgba(7,7,15,0.7)';
-  }, { passive: true });
-
-  // Active link on scroll
-  const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.nav-links a');
-
-  const sectionObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      navLinks.forEach(link => {
-        const isActive = link.getAttribute('href') === '#' + entry.target.id;
-        link.classList.toggle('active', isActive);
-      });
-    });
-  }, { threshold: 0.4 });
-
-  sections.forEach(s => sectionObserver.observe(s));
-}
 
 // ─── Stagger project cards ────────────────────────────
 function initProjectStagger() {
@@ -175,12 +147,43 @@ function initAnimatedUnderline() {
   observer.observe(el);
 }
 
+// ─── TOC Nav highlight ───────────────────────────────
+function initTocNav() {
+  const tocNav = document.getElementById('toc-nav');
+  if (!tocNav) return;
+
+  // cover-letter TOC 항목은 섹션이 보일 때만 표시
+  const coverLetterSection = document.getElementById('cover-letter');
+  const coverLetterItem = tocNav.querySelector('.toc-cover-letter');
+  if (coverLetterSection && coverLetterItem) {
+    const syncVisibility = () => {
+      coverLetterItem.style.display = coverLetterSection.classList.contains('visible') ? '' : 'none';
+    };
+    syncVisibility();
+    new MutationObserver(syncVisibility).observe(coverLetterSection, { attributes: true, attributeFilter: ['class'] });
+  }
+
+  const tocLinks = tocNav.querySelectorAll('.toc-item');
+  const sections = document.querySelectorAll('section[id]');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      tocLinks.forEach(link => {
+        link.classList.toggle('toc-active', link.getAttribute('href') === '#' + entry.target.id);
+      });
+    });
+  }, { threshold: 0, rootMargin: '-10% 0px -55% 0px' });
+
+  sections.forEach(s => observer.observe(s));
+}
+
 // ─── Init all ────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   initSparkles();
   initScrollReveal();
   initAnimatedUnderline();
   initCounters();
-  initNav();
   initProjectStagger();
+  initTocNav();
 });
