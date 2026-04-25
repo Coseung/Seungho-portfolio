@@ -76,16 +76,6 @@ function applyConfig(config) {
     document.title = `최승호 | ${meta.company} ${meta.position ?? '지원'}`;
   }
 
-  // 회사 배너
-  if (meta.company) {
-    const banner = document.getElementById('company-banner');
-    if (banner) {
-      banner.textContent = `${meta.company}${meta.position ? ` · ${meta.position}` : ''} 지원용 포트폴리오입니다`;
-      banner.classList.add('visible');
-      // 배너 높이만큼 첫 섹션 padding 조정
-      document.querySelector('#hero').style.paddingTop = '108px';
-    }
-  }
 
   // Hero badge
   if (hero.badge) {

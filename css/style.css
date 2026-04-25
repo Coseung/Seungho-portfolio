@@ -42,26 +42,6 @@ body {
 }
 
 
-/* Company banner */
-.company-banner {
-  display: none;
-  position: fixed;
-  top: 64px;
-  left: 0;
-  right: 0;
-  z-index: 99;
-  background: rgba(47, 47, 228, 0.08);
-  border-bottom: 1px solid var(--accent-border);
-  padding: .45rem 5%;
-  font-size: .75rem;
-  color: var(--accent);
-  text-align: center;
-  letter-spacing: .04em;
-}
-
-.company-banner.visible {
-  display: block;
-}
 
 /* ─── Section Common ───────────────────────────── */
 section {
@@ -1232,10 +1212,6 @@ footer span {
 
   /* 고정 nav 숨김 */
   nav {
-    display: none !important;
-  }
-
-  .company-banner {
     display: none !important;
   }
 
