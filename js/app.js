@@ -32,10 +32,13 @@
 // ─── URL에서 회사 slug 추출 ───────────────────────────
 function getCompanySlug() {
   // 1순위: 경로명  /kakao  →  'kakao'
-  const segments = window.location.pathname.split('/').filter(Boolean);
-  const lastSeg = segments[segments.length - 1];
-  if (lastSeg && lastSeg !== 'index.html' && !lastSeg.includes('.')) {
-    return lastSeg;
+  // pathname이 /로 끝나면 slug가 없는 것 (GitHub Pages base path 오인식 방지)
+  const { pathname } = window.location;
+  if (!pathname.endsWith('/')) {
+    const lastSeg = pathname.split('/').filter(Boolean).pop();
+    if (lastSeg && lastSeg !== 'index.html' && !lastSeg.includes('.')) {
+      return lastSeg;
+    }
   }
 
   // 2순위: 쿼리 파라미터  ?c=kakao
@@ -52,7 +55,7 @@ function getCompanySlug() {
 // ─── 회사 JSON 로드 ──────────────────────────────────
 async function loadCompanyConfig(slug) {
   try {
-    const url = `/data/companies/${slug}.json`;
+    const url = `./data/companies/${slug}.json`;
 
     const res = await fetch(url);
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
